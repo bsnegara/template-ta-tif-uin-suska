@@ -1,0 +1,102 @@
+% Templat TA TIF UIN Suska Riau -- (c) 2026 Benny Sukma Negara
+% Contoh elemen naskah. Tidak dikompilasi kecuali diaktifkan di main.tex.
+\chapter{Contoh Elemen Naskah}
+\label{bab:contoh}
+
+\section{Gambar dan Subgambar}
+Gambar~\ref{fig:logo} menunjukkan cara menyisipkan gambar dari folder \texttt{images/}.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.35\textwidth]{images/logo-uin-suska.png}
+\caption{Logo UIN Suska Riau}
+\label{fig:logo}
+\end{figure}
+
+Subgambar berdampingan ditunjukkan pada Gambar~\ref{fig:sub}.
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}{0.35\textwidth}
+  \centering\includegraphics[width=\textwidth]{images/logo-uin-suska.png}
+  \caption{Contoh pertama}\label{fig:suba}
+\end{subfigure}\hfill
+\begin{subfigure}{0.35\textwidth}
+  \centering\includegraphics[width=\textwidth]{images/logo-uin-suska.png}
+  \caption{Contoh kedua}\label{fig:subb}
+\end{subfigure}
+\caption{Contoh dua subgambar}
+\label{fig:sub}
+\end{figure}
+
+\section{Tabel}
+Tabel~\ref{tab:contoh} adalah contoh tabel bergaris penuh dengan sel gabungan.
+\begin{table}[htbp]
+\caption{Contoh tabel hasil pengujian}
+\label{tab:contoh}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\multirow{2}{*}{Skenario} & \multicolumn{2}{c|}{Hasil} & \multirow{2}{*}{Status}\\
+\cline{2-3}
+ & Diharapkan & Aktual & \\
+\hline
+Login valid       & Berhasil  & Berhasil  & Sesuai\\ \hline
+Login tidak valid & Ditolak   & Ditolak   & Sesuai\\ \hline
+Unggah berkas     & Tersimpan & Tersimpan & Sesuai\\ \hline
+\end{tabular}
+\end{table}
+
+\section{Diagram Alir (TikZ)}
+Diagram alir sederhana ditunjukkan pada Gambar~\ref{fig:alir}.
+\begin{figure}[htbp]
+\centering
+\tikzset{
+  proses/.style={rectangle, draw, rounded corners=2pt, minimum width=32mm, minimum height=8mm, align=center, font=\small},
+  keputusan/.style={diamond, draw, aspect=2.5, align=center, inner sep=1pt, font=\small},
+  garis/.style={-{Stealth[length=2.2mm]}}
+}
+\begin{tikzpicture}[node distance=7mm]
+  \node[proses] (a) {Studi literatur};
+  \node[proses, below=of a] (b) {Pengumpulan data};
+  \node[proses, below=of b] (c) {Perancangan dan implementasi};
+  \node[keputusan, below=of c] (d) {Hasil\\sesuai?};
+  \node[proses, below=of d] (e) {Penarikan kesimpulan};
+  \draw[garis] (a) -- (b);
+  \draw[garis] (b) -- (c);
+  \draw[garis] (c) -- (d);
+  \draw[garis] (d) -- node[right, font=\small]{ya} (e);
+  \draw[garis] (d.east) -- ++(18mm,0) node[above, font=\small, pos=0.4]{tidak} |- (c.east);
+\end{tikzpicture}
+\caption{Contoh diagram alir penelitian}
+\label{fig:alir}
+\end{figure}
+
+\section{Rumus}
+Rumus yang dicantumkan di Daftar Rumus memakai lingkungan \texttt{rumus}:
+\begin{rumus}{F1-\textit{score}}
+  F_1 = 2\cdot\frac{\text{Presisi}\cdot\text{Recall}}{\text{Presisi}+\text{Recall}}
+  \label{eq:f1}
+\end{rumus}
+Rumus bernomor yang tidak perlu masuk Daftar Rumus cukup memakai \texttt{equation}.
+
+\section{Algoritma}
+\begin{algorithm}[htbp]
+\caption{Mencari nilai maksimum dalam larik}
+\label{alg:max}
+\begin{algorithmic}[1]
+\Require Larik $A$ dengan $n$ elemen
+\Ensure Nilai maksimum pada $A$
+\State $maks \gets A[1]$
+\For{$i \gets 2$ \textbf{to} $n$}
+  \If{$A[i] > maks$}
+    \State $maks \gets A[i]$
+  \EndIf
+\EndFor
+\State \Return $maks$
+\end{algorithmic}
+\end{algorithm}
+
+\section{Potongan Kode}
+\begin{lstlisting}[language=Python, caption={Contoh potongan kode Python}, label={lst:contoh}]
+def rata_rata(data):
+    # hitung rata-rata
+    return sum(data) / len(data)
+\end{lstlisting}

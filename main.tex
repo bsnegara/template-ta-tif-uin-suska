@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Proposal / Laporan Tugas Akhir
+%% Jurusan Teknik Informatika -- UIN Sultan Syarif Kasim Riau
+%%
+%% Pembuat (Creator) templat : Benny Sukma Negara
+%% Hak Cipta (c) 2026 Benny Sukma Negara. Seluruh hak dilindungi.
+%% Pemegang hak cipta source LaTeX ini adalah Benny Sukma Negara.
+%% Pernyataan pembuat dan hak cipta ini tidak boleh dihapus.
+%%
+%% Kompilator : XeLaTeX   |   Bibliografi : Biber
+%% Opsi kelas : laporan | ieee | nomoratas | tanpapetunjuk
+%%   \documentclass{suskaskripsi}          -> PROPOSAL TUGAS AKHIR (Bab 1--3)
+%%   \documentclass[laporan]{suskaskripsi} -> LAPORAN TUGAS AKHIR (Bab 1--5)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{suskaskripsi}
+\input{metadata}
+
+% Hanya kompilasi bab tertentu (mempercepat saat menulis), contoh:
+% \includeonly{chapters/bab1_pendahuluan}
+
+\begin{document}
+
+%% ============ BAGIAN AWAL (nomor halaman i, ii, iii, ...) ============
+\frontmatter
+\pagenumbering{roman}
+\HalamanSampul                 % halaman i (nomor tidak dicetak)
+\LembarPersetujuan             % halaman ii
+
+\iflaporan
+  \LembarPengesahan
+  \LembarHAKI
+  \LembarPernyataan
+  \input{frontmatter/persembahan}
+  \input{frontmatter/abstrak}
+  \input{frontmatter/kata_pengantar}
+\else
+  % Bagian opsional proposal -- hapus tanda % bila diminta pembimbing:
+  % \input{frontmatter/abstrak}
+  % \input{frontmatter/kata_pengantar}
+\fi
+
+\DaftarIsi
+\DaftarGambar
+\DaftarTabel
+\DaftarRumus
+% \input{frontmatter/daftar_singkatan}
+% \input{frontmatter/daftar_simbol}
+
+%% ============ BAGIAN INTI (nomor halaman 1, 2, 3, ...) ============
+\mainmatter
+\include{chapters/bab1_pendahuluan}
+\include{chapters/bab2_kajian_pustaka}
+\include{chapters/bab3_metodologi}
+\iflaporan
+  \include{chapters/bab4_pembahasan}
+  \include{chapters/bab5_penutup}
+\fi
+% Contoh gambar, subgambar, tabel, diagram alir, rumus, algoritma, kode:
+% \include{contoh/contoh_elemen}
+
+%% ============ BAGIAN AKHIR ============
+\backmatter
+\DaftarPustaka
+
+\Lampiran
+\include{appendices/lampiran_a}
+
+\iflaporan
+  \input{frontmatter/riwayat_hidup}
+\fi
+
+\end{document}

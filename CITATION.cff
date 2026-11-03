@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Jika Anda menggunakan templat ini, mohon sitasi sebagai berikut."
+title: "Templat LaTeX Proposal dan Laporan Tugas Akhir Teknik Informatika UIN Sultan Syarif Kasim Riau"
+type: software
+authors:
+  - family-names: "Negara"
+    given-names: "Benny Sukma"
+    orcid: "https://orcid.org/0000-0001-8455-0912"
+    email: "bsnegara@uin-suska.ac.id"
+    affiliation: "Jurusan Teknik Informatika, Fakultas Sains dan Teknologi, UIN Sultan Syarif Kasim Riau"
+version: "2.0.0"
+date-released: "2026-11-03"
+license: "CC-BY-NC-4.0"
+repository-code: "https://github.com/bsnegara/template-ta-tif-uin-suska"
+keywords:
+  - LaTeX
+  - templat tugas akhir
+  - skripsi
+  - Overleaf
+  - Teknik Informatika
+  - UIN Suska Riau

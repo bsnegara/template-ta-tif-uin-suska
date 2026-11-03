@@ -1,0 +1,15 @@
+{
+  "title": "Templat LaTeX Proposal dan Laporan Tugas Akhir Teknik Informatika UIN Sultan Syarif Kasim Riau",
+  "upload_type": "software",
+  "description": "<p>Templat LaTeX (XeLaTeX + Biber) untuk Proposal dan Laporan Tugas Akhir Jurusan Teknik Informatika, Fakultas Sains dan Teknologi, UIN Sultan Syarif Kasim Riau. Format disesuaikan dengan Template Laporan Tugas Akhir jurusan: margin 4-4-3-3 cm, Times New Roman 12 pt, spasi 1,5, judul bab, penomoran gambar/tabel/rumus, Daftar Isi/Gambar/Tabel/Rumus otomatis, lembar persetujuan/pengesahan/pernyataan otomatis, serta sitasi APA 7. Satu source untuk mode proposal (Bab 1-3) dan laporan (Bab 1-5). Siap digunakan di Overleaf.</p>",
+  "creators": [
+    {
+      "name": "Negara, Benny Sukma",
+      "affiliation": "Universitas Islam Negeri Sultan Syarif Kasim Riau",
+      "orcid": "0000-0001-8455-0912"
+    }
+  ],
+  "license": "cc-by-nc-4.0",
+  "language": "ind",
+  "keywords": ["LaTeX", "templat tugas akhir", "skripsi", "Overleaf", "Teknik Informatika", "UIN Suska Riau"]
+}
