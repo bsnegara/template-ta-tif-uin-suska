@@ -1,5 +1,7 @@
 # Templat LaTeX Proposal & Laporan Tugas Akhir — Teknik Informatika UIN Suska Riau
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23908753.svg)](https://doi.org/10.5281/zenodo.23908753)
+
 Templat LaTeX untuk **Proposal Tugas Akhir** dan **Laporan Tugas Akhir** Jurusan Teknik Informatika,
 Fakultas Sains dan Teknologi, UIN Sultan Syarif Kasim Riau. Formatnya disesuaikan dengan
 *Template Laporan Tugas Akhir* jurusan (versi Word/PDF).
@@ -64,7 +66,7 @@ images/                  logo-uin-suska.png dan gambar naskah
 ```
 
 ## Cara mengutip
-Negara, B. S. (2026). *Templat LaTeX Proposal dan Laporan Tugas Akhir Teknik Informatika UIN Sultan Syarif Kasim Riau* (Versi 2.0.0) [Perangkat lunak]. Zenodo. https://doi.org/DOI-ANDA
+Negara, B. S. (2026). *Templat LaTeX Proposal dan Laporan Tugas Akhir Teknik Informatika UIN Sultan Syarif Kasim Riau* (Versi 2.0.0) [Perangkat lunak]. Zenodo. https://doi.org/10.5281/zenodo.23908753
 
 Klik **Cite this repository** di halaman GitHub untuk format APA/BibTeX.
 
